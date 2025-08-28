@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silly Website!</title>
+  <link rel="icon" href="https://yt3.ggpht.com/NPjAhH3_618QGAT-v02By02fctCg5noZ-MURCpFfnR7py8rEjezGMPSEFayYwJBMACsJ8top1g=s48-c-k-c0x00ffffff-no-rj" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to my website. 👋</h1>
+    <p>My name is Karl.</p>
+    <p>Page clicks: <span id="clicks">0</span></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I Live In Estonia.</p>
+      <p>I code in Lua and Python, and I like making games.</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>Turn-based game: <em>Combo</em></li>
+        <li>Random Roblox and LÖVE2D projects</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Connect with me</h2>
+      <a href="https://www.youtube.com/channel/UCICh4ttmVLeO_btU0r-4Y6A/" target="_blank">
+        <img src="https://yt3.ggpht.com/NPjAhH3_618QGAT-v02By02fctCg5noZ-MURCpFfnR7py8rEjezGMPSEFayYwJBMACsJ8top1g=s48-c-k-c0x00ffffff-no-rj" 
+             alt="YouTube Icon" width="50">
+      </a>
+      <p>Check out my YouTube channel!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Karl</p>
+  </footer>
+
+  <script>
+  // Load stored click count or start at 0
+  let clickCount = localStorage.getItem('clickCount') || 0;
+  clickCount = parseInt(clickCount); // make sure it's a number
+  document.getElementById('clicks').innerText = clickCount;
+
+  // Increment on click anywhere
+  document.addEventListener('click', function() {
+    clickCount++;
+    document.getElementById('clicks').innerText = clickCount;
+    localStorage.setItem('clickCount', clickCount); // save count
+  });
+  </script>
+</body>
+</html>
